@@ -316,6 +316,26 @@
         html {
             scroll-behavior: smooth;
         }
+
+        /* Glass Card Effect */
+        .glass-card {
+            background: rgba(10, 10, 10, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(200, 50, 50, 0.2);
+        }
+
+        /* Button Outline Red */
+        .btn-outline-red {
+            border: 2px solid #DC2626;
+            color: #DC2626;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-red:hover {
+            background: #DC2626;
+            color: white;
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 <body class="text-white">
@@ -539,114 +559,138 @@
     </section>
 
     <!-- Menu Section -->
-    <section id="menu" class="py-20 px-6 content-section">
-        <div class="container mx-auto max-w-6xl">
+    <section id="menu" class="py-24 px-6 relative content-section">
+        <div class="max-w-4xl mx-auto">
             <div class="text-center mb-16 fade-in-up">
-                <h2 class="text-4xl md:text-5xl mb-4 text-[#C41E3A]">Menu Highlights</h2>
-                <p class="text-xl text-gray-300">Discover our carefully curated selection of Italian masterpieces</p>
+                <h2 class="text-4xl md:text-5xl font-light mb-6 tracking-tight text-white">Our Menu</h2>
+                <div class="w-20 h-px bg-[#DC2626] mx-auto mb-6"></div>
+                <p class="text-xl text-gray-300">
+                    A curated selection of authentic Italian cuisine with Mediterranean influences
+                </p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-12">
+            <div class="glass-card rounded-lg p-8 md:p-12 fade-in-up">
                 <!-- Antipasti -->
-                <div class="fade-in-up">
-                    <h3 class="text-3xl mb-8 text-white border-b-2 border-[#C41E3A] pb-2">Antipasti</h3>
+                <div class="mb-12">
+                    <h3 class="text-3xl font-light mb-6 text-[#DC2626] tracking-tight">Antipasti</h3>
                     <div class="space-y-4">
-                        <div class="menu-item content-card rounded">
-                            <h4 class="text-xl font-semibold text-white mb-1">Bruschetta al Pomodoro</h4>
-                            <p class="text-gray-300 text-sm">Fresh tomatoes, basil, garlic, extra virgin olive oil</p>
+                        <div class="menu-item p-4 rounded">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="text-lg font-normal text-white">Burrata con Pomodori</h4>
+                                <span class="text-[#DC2626]">$$</span>
+                            </div>
+                            <p class="text-sm text-gray-400">Fresh burrata, heirloom tomatoes, basil, aged balsamic</p>
                         </div>
-                        <div class="menu-item content-card rounded">
-                            <h4 class="text-xl font-semibold text-white mb-1">Carpaccio di Manzo</h4>
-                            <p class="text-gray-300 text-sm">Thinly sliced beef, arugula, parmigiano, truffle oil</p>
+
+                        <div class="menu-item p-4 rounded">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="text-lg font-normal text-white">Carpaccio di Manzo</h4>
+                                <span class="text-[#DC2626]">$$</span>
+                            </div>
+                            <p class="text-sm text-gray-400">Beef carpaccio, arugula, parmigiano, truffle oil</p>
+                        </div>
+
+                        <div class="menu-item p-4 rounded">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="text-lg font-normal text-white">Polpo alla Griglia</h4>
+                                <span class="text-[#DC2626]">$$</span>
+                            </div>
+                            <p class="text-sm text-gray-400">Grilled octopus, chickpea purée, cherry tomatoes</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Primi Piatti -->
-                <div class="fade-in-up">
-                    <h3 class="text-3xl mb-8 text-white border-b-2 border-[#C41E3A] pb-2">Primi Piatti</h3>
+                <!-- Primi -->
+                <div class="mb-12">
+                    <h3 class="text-3xl font-light mb-6 text-[#DC2626] tracking-tight">Primi Piatti</h3>
                     <div class="space-y-4">
-                        <div class="menu-item content-card rounded">
-                            <h4 class="text-xl font-semibold text-white mb-1">Ravioli di Ricotta e Spinaci</h4>
-                            <p class="text-gray-300 text-sm">Handmade ricotta and spinach ravioli, sage butter sauce</p>
+                        <div class="menu-item p-4 rounded">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="text-lg font-normal text-white">Tagliatelle al Tartufo</h4>
+                                <span class="text-[#DC2626]">$$$</span>
+                            </div>
+                            <p class="text-sm text-gray-400">Handmade tagliatelle, black truffle, butter, parmigiano</p>
                         </div>
-                        <div class="menu-item content-card rounded">
-                            <h4 class="text-xl font-semibold text-white mb-1">Risotto ai Funghi Porcini</h4>
-                            <p class="text-gray-300 text-sm">Carnaroli rice, porcini mushrooms, parmigiano</p>
+
+                        <div class="menu-item p-4 rounded">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="text-lg font-normal text-white">Ravioli di Ricotta e Spinaci</h4>
+                                <span class="text-[#DC2626]">$$</span>
+                            </div>
+                            <p class="text-sm text-gray-400">Ricotta and spinach ravioli, sage butter, pine nuts</p>
+                        </div>
+
+                        <div class="menu-item p-4 rounded">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="text-lg font-normal text-white">Risotto ai Frutti di Mare</h4>
+                                <span class="text-[#DC2626]">$$$</span>
+                            </div>
+                            <p class="text-sm text-gray-400">Seafood risotto, local catch, saffron, white wine</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Secondi -->
-                <div class="fade-in-up">
-                    <h3 class="text-3xl mb-8 text-white border-b-2 border-[#C41E3A] pb-2">Secondi</h3>
+                <div class="mb-8">
+                    <h3 class="text-3xl font-light mb-6 text-[#DC2626] tracking-tight">Secondi Piatti</h3>
                     <div class="space-y-4">
-                        <div class="menu-item content-card rounded">
-                            <h4 class="text-xl font-semibold text-white mb-1">Branzino al Forno</h4>
-                            <p class="text-gray-300 text-sm">Mediterranean sea bass, lemon, herbs, roasted vegetables</p>
+                        <div class="menu-item p-4 rounded">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="text-lg font-normal text-white">Branzino al Forno</h4>
+                                <span class="text-[#DC2626]">$$$</span>
+                            </div>
+                            <p class="text-sm text-gray-400">Oven-roasted Mediterranean sea bass, herbs, lemon</p>
                         </div>
-                        <div class="menu-item content-card rounded">
-                            <h4 class="text-xl font-semibold text-white mb-1">Ossobuco alla Milanese</h4>
-                            <p class="text-gray-300 text-sm">Braised veal shank, saffron risotto, gremolata</p>
+
+                        <div class="menu-item p-4 rounded">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="text-lg font-normal text-white">Osso Buco alla Milanese</h4>
+                                <span class="text-[#DC2626]">$$$</span>
+                            </div>
+                            <p class="text-sm text-gray-400">Braised veal shank, saffron risotto, gremolata</p>
+                        </div>
+
+                        <div class="menu-item p-4 rounded">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="text-lg font-normal text-white">Filetto di Manzo</h4>
+                                <span class="text-[#DC2626]">$$$$</span>
+                            </div>
+                            <p class="text-sm text-gray-400">Beef tenderloin, roasted vegetables, red wine reduction</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Wine Selection -->
-                <div class="fade-in-up">
-                    <h3 class="text-3xl mb-8 text-white border-b-2 border-[#C41E3A] pb-2">Wine Selection</h3>
-                    <div class="content-card p-6 rounded-lg">
-                        <p class="text-gray-300 mb-4 leading-relaxed">
-                            Explore our extensive wine cellar featuring over 250 carefully selected international labels, expertly paired with our seasonal menu by our sommelier.
-                        </p>
-                        <a href="mailto:ombrasj@gmail.com" class="inline-block bg-[#C41E3A] text-white px-6 py-3 rounded-full text-sm uppercase tracking-wider hover:bg-[#8B0000] transition-all">
-                            Request Wine List
-                        </a>
-                    </div>
+                <div class="text-center pt-8 border-t border-[#DC2626]/30">
+                    <p class="text-sm text-gray-400 mb-4">Wine pairings available from our selection of over 250 international labels</p>
+                    <a href="tel:787-705-0822" class="btn-outline-red inline-block px-8 py-3 rounded-full text-sm uppercase">
+                        Request Full Menu
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Experience Section -->
-    <section class="py-20 px-6 content-section">
-        <div class="container mx-auto max-w-6xl">
-            <div class="text-center mb-16 fade-in-up">
-                <h2 class="text-4xl md:text-5xl mb-4 text-[#C41E3A]">The Ombra Experience</h2>
-                <p class="text-xl text-gray-300">Where every detail creates unforgettable memories</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="fade-in-up content-card p-8 rounded-lg hover-lift">
-                    <div class="text-[#C41E3A] text-4xl mb-4">✦</div>
-                    <h3 class="text-2xl text-white mb-4">Sleek Modern Design</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Our recently renovated space features a contemporary aesthetic creating an intimate, warm ambiance perfect for romantic dinners or celebrations.
-                    </p>
-                </div>
-
-                <div class="fade-in-up content-card p-8 rounded-lg hover-lift">
-                    <div class="text-[#C41E3A] text-4xl mb-4">✦</div>
-                    <h3 class="text-2xl text-white mb-4">Award-Winning Excellence</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Recognized by Puerto Rico Wine Masters as one of the top 10 restaurants on the island for 2024.
-                    </p>
-                </div>
-
-                <div class="fade-in-up content-card p-8 rounded-lg hover-lift">
-                    <div class="text-[#C41E3A] text-4xl mb-4">✦</div>
-                    <h3 class="text-2xl text-white mb-4">Curated Wine Collection</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Over 250 carefully selected international labels, expertly paired with our seasonal menu.
-                    </p>
-                </div>
-
-                <div class="fade-in-up content-card p-8 rounded-lg hover-lift">
-                    <div class="text-[#C41E3A] text-4xl mb-4">✦</div>
-                    <h3 class="text-2xl text-white mb-4">Private Events</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Host your special occasions in our elegant private dining spaces tailored to perfection.
-                    </p>
+    <section id="experience" class="py-20 px-6 content-section">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center mb-12 fade-in-up content-card p-12 md:p-16 rounded-lg shadow-xl">
+                <h2 class="text-4xl md:text-5xl mb-6 text-[#DC143C]">An Unforgettable Experience</h2>
+                <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+                    Our sleek, modern interior creates an atmosphere of quiet luxury and intimacy. With over 250 carefully selected wine labels from around the world, each meal becomes a journey through the finest vineyards of Italy and beyond.
+                </p>
+                <div class="grid md:grid-cols-3 gap-8 mt-12">
+                    <div class="text-center transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-5xl font-light text-[#DC143C] mb-2">250+</div>
+                        <div class="text-sm uppercase tracking-wide text-gray-300">Wine Labels</div>
+                    </div>
+                    <div class="text-center transform hover:scale-110 transition-transform duration-300">
+                        <div class="text-6xl font-light text-[#DC143C] mb-2">★</div>
+                        <div class="text-sm uppercase tracking-wide text-gray-300">Michelin Recognition</div>
+                    </div>
+                    <div class="text-center transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-5xl font-light text-[#DC143C] mb-2">130</div>
+                        <div class="text-sm uppercase tracking-wide text-gray-300">Years of Heritage</div>
+                    </div>
                 </div>
             </div>
         </div>
